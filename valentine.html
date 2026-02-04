@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Be My Valentine 💖</title>
+<style>
+body {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    text-align: center;
+    font-family: "Comic Sans MS", cursive;
+    overflow: hidden;
+}
+
+#heart {
+    font-size: 150px;
+    margin-top: 40px;
+}
+
+button {
+    font-size: 28px;
+    padding: 15px 40px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+}
+
+#yes {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+#no {
+    background-color: #444;
+    color: white;
+    position: absolute;
+}
+
+#yay {
+    display: none;
+    font-size: 80px;
+    color: #ff0055;
+}
+
+#cat {
+    display: none;
+    width: 350px;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="heart">❤️</div>
+<h1>Will you be my Valentine?</h1>
+
+<button id="yes">YES 💕</button>
+<button id="no">NO 😢</button>
+
+<div id="yay">YAYYYYY!!! 💖🥰</div>
+<img id="cat" src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">
+
+<script>
+const no = document.getElementById("no");
+const yes = document.getElementById("yes");
+const yay = document.getElementById("yay");
+const cat = document.getElementById("cat");
+
+no.style.left = "50%";
+no.style.top = "60%";
+
+no.addEventListener("mouseover", () => {
+    const x = Math.random() * (window.innerWidth - 150);
+    const y = Math.random() * (window.innerHeight - 100);
+    no.style.left = x + "px";
+    no.style.top = y + "px";
+});
+
+yes.addEventListener("click", () => {
+    document.body.innerHTML = "";
+    document.body.style.background = "pink";
+    document.body.innerHTML = "<div style='font-size:100px;margin-top:50px;'>YAYYYYY 💖</div><br><img src='https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif' width='400'>";
+});
+</script>
+
+</body>
+</html>
